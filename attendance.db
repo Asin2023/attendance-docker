@@ -1,0 +1,22 @@
+import sqlite3
+db = sqlite3.connect("attendance.db")
+
+db.execute("""
+CREATE TABLE users (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    username TEXT,
+    password TEXT
+)
+""")
+
+db.execute("""
+CREATE TABLE attendance (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    name TEXT,
+    status TEXT
+)
+""")
+
+db.commit()
+db.close()
+exit()
