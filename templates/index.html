@@ -1,0 +1,19 @@
+<form method="post">
+  <input name="name" placeholder="Student Name" required>
+  <select name="status">
+    <option>Present</option>
+    <option>Absent</option>
+  </select>
+  <button>Add</button>
+</form>
+
+<table>
+{% for r in records %}
+<tr>
+<td>{{ r[1] }}</td>
+<td>{{ r[2] }}</td>
+</tr>
+{% endfor %}
+</table>
+
+<a href="/logout">Logout</a>
